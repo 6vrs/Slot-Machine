@@ -47,7 +47,7 @@ const menu = (balance) => {
         if (choice == 1){
             balance = deposit(balance);
         } else if (choice == 2){
-            viewBalance();
+            viewBalance(balance);
         } else if (choice == 4){
             break
         } else
