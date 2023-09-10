@@ -48,7 +48,12 @@ const menu = (balance) => {
             balance = deposit(balance);
         } else if (choice == 2){
             viewBalance(balance);
-        } else if (choice == 4){
+        } else if (choice == 3 && balance > 0){
+            console.log(`valid`);
+        } else if (choice == 3 && balance <= 0){
+            console.log(`invalid`)
+        } 
+        else if (choice == 4){
             break
         } else
             console.log(`ERROR --> Invalid Input`);
@@ -72,6 +77,7 @@ const manualDeposit = () => {
     }
     
 }
+
 
 const randomDeposit = () => {
     return Math.floor((Math.random() * 10000) + 1);
